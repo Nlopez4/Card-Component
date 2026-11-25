@@ -1,0 +1,49 @@
+@layer reset {
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent font size inflation */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  h1 {
+    color: #1c232b;
+    text-wrap: balance; /* for large text */
+  }
+
+  h1,
+  button {
+    line-height: 1.1;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    max-inline-size: 100%; /* horizontal */
+    display: block; /* vertical */
+  }
+
+  button {
+    font: inherit;
+  }
+}
+@layer base {
+}
