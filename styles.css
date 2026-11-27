@@ -1,3 +1,5 @@
+@layer reset, base, typography, components;
+
 @layer reset {
   /* Box sizing rules */
   *,
@@ -45,5 +47,72 @@
     font: inherit;
   }
 }
+
 @layer base {
+  :root {
+    /* using for best practice, but would be better to use when having multiple colors of the same type*/
+    --clr-cream: hsl(30°, 38%, 92%);
+    --clr-white: hsl(0°, 0%, 100%);
+    --clr-black: hsl(212°, 21%, 14%);
+    --clr-grey: hsl(228°, 12%, 48%) %;
+    --clr-green-light: hsl(158°, 36%, 37%);
+    --clr-green-dark: hsl(158°, 42%, 18%)''
+    
+    /* Font families */
+    --ff-primary: "Montserrat", sans-serif;
+    --ff-secondary: "Fraunces", serif;
+
+    /* Font weights */
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    /* Font sizes */
+    --fs-900: 2rem;
+    --fs-400: 0.875rem;
+    --fs-300: 0.8125rem;
+    --fs-200: 0.75rem;
+    }
+    
+    body {
+        background-color: var(--clr-cream);
+    }
+
+    @media (width > 760px) {
+    }
+}
+
+@layer typography {
+    .text-preset-1 {
+        font-family: var(--ff-secondary);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-900);
+        line-height: 1;
+    }
+    .text-preset-2 {
+        font-family: var(--ff-primary);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-400);
+        line-height: 1.6;
+    }
+    .text-preset-3 {
+        font-family: var(--ff-primary);
+        font-weight: var(--fw-medium);
+        font-size: var(--fs-400);
+        line-height: 1.6;
+    }
+    .text-preset-4 {
+        font-family: var(--ff-primary);
+        font-weight: var(--fw-medium);
+        font-size: var(--fs-200);
+        line-height: 1.2;
+    }
+    .text-preset-5 {
+        font-family: var(--ff-primary);
+        font-weight: var(--fw-medium);
+        font-size: var(--fs-300);
+        line-height: 1.2;
+    }
+}
+
+@layer components {
 }
